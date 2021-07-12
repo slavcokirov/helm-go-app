@@ -11,7 +11,7 @@ steps:
         from_secret: api-server
       kube_token:
         from_secret: kube_token
-      chart: .\helm-chart
+      chart: ./helm-chart
       release: go-app
       namespace: default
       wait: true
