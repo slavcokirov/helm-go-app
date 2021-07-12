@@ -7,7 +7,8 @@ steps:
   - name: deploy
     image: bitsbeats/drone-helm3
     settings:
-      kube_api_server: https://cebcfaef-35a6-44b9-a501-25cb26cf610e.k8s.ondigitalocean.com
+      kube_api_server:
+        from_secret: api-server
       kube_token:
         from_secret: kube_token
       chart: .\go-k8s\helm-chart
