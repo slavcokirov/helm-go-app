@@ -34,3 +34,11 @@ spec:
             port: {{ .Values.service.internalPort }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+    spec:
+      type: LoadBalancer
+      ports:
+      - name: node
+        port: {{ .Values.port }}
+        targetPort: node
+      selector:
+        app: {{ template "fullname" . }}
