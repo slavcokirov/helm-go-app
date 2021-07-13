@@ -17,6 +17,15 @@ service:
   externalPort: 3000
   internalPort: 3000
 
+service:
+  enabled: true
+  type: LoadBalancer
+  ports:
+    app:
+      port: 3000
+      targetPort: 3000
+      protocol: TCP
+
 resources:
   limits:
     cpu: 100m
