@@ -12,12 +12,6 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  name: go-app
-  type: NodePort
-  externalPort: 3000
-  internalPort: 3000
-
-service:
   enabled: true
   type: LoadBalancer
   ports:

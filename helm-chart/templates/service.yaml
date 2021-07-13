@@ -13,12 +13,3 @@ spec:
     name: {{ .Values.service.name }}
   selector:
     app: {{ template "fullname" . }}
-
-spec:
-  type: {{ .Values.service.type }}
-  ports:
-  - name: {{ .Values.service.name }}
-    port: {{ .Values.service.externalPort }}
-    targetPort: {{ .Values.service.internalPort }}
-  selector:
-    app: {{ template "fullname" . }}
