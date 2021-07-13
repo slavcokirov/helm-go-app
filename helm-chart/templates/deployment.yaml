@@ -38,7 +38,7 @@ spec:
       type: LoadBalancer
       ports:
       - name: node
-        port: {{ .Values.port }}
+        port: {{ .Values.service.externalPort }}
         targetPort: node
       selector:
         app: {{ template "fullname" . }}
