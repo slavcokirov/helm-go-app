@@ -16,3 +16,4 @@ steps:
       namespace: default
       wait: true
       force: true
+      kube_skip_tls: true
