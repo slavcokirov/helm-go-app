@@ -7,7 +7,7 @@ imagePullSecrets:
   - name: regcred
 
 image:
-  repository: slavchokirov/go-k8s
+  repository: the/name/of/your/docker/repo
   tag: 0.1.0
   pullPolicy: IfNotPresent
 
