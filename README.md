@@ -12,24 +12,20 @@ These instructions will help you to deploy a sample GO app using HELM as Kuberne
 * Docker
 * Helm
 
-## TODO
+## Deployment steps
 
-1. Push the docker image to your docker repo
+1. Push the docker image to your docker repository
 2. Edit the values.yaml file
 3. Add your k8s api-server and kube-token as drone secrets
+4. Push to your remote git repository to trigger a drone ci deployment
 
-
-
-### Testing 
+### Manual Deployment
 
 1. ```helm install RELEASE-NAME ./helm-chart/go-k8s/```  
 2. ```helm uninstall RELEASE-NAME```
-
 
 ## External links
 
 * More about HELM:     https://helm.sh/
 * More about Drone CI: https://docs.drone.io/
 * More about Kubectl:  https://kubernetes.io/docs/tasks/tools/
-
-
